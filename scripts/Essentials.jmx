@@ -54,12 +54,12 @@
           </elementProp>
           <elementProp name="timer_delay_offset" elementType="Argument">
             <stringProp name="Argument.name">timer_delay_offset</stringProp>
-            <stringProp name="Argument.value">4000</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="timer_devaition" elementType="Argument">
             <stringProp name="Argument.name">timer_devaition</stringProp>
-            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
