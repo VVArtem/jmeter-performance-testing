@@ -54,12 +54,12 @@
           </elementProp>
           <elementProp name="timer_delay_offset" elementType="Argument">
             <stringProp name="Argument.name">timer_delay_offset</stringProp>
-            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="timer_devaition" elementType="Argument">
             <stringProp name="Argument.name">timer_devaition</stringProp>
-            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -1293,7 +1293,7 @@
       </hashTree>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Func A: Think time" enabled="true"/>
       <hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Pause" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Pause">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">0</stringProp>
