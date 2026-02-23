@@ -63,7 +63,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customer">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customer" enabled="false">
         <intProp name="ThreadGroup.num_threads">400</intProp>
         <intProp name="ThreadGroup.ramp_time">3600</intProp>
         <stringProp name="ThreadGroup.duration">${__P(duration,3600)}</stringProp>
@@ -385,7 +385,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Open Model Customer" enabled="false">
+      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Open Model Customer">
         <stringProp name="OpenModelThreadGroup.schedule">rate(0/sec) random_arrivals(5 min) rate(8/sec) even_arrivals(60 min) rate(8/sec)</stringProp>
         <longProp name="OpenModelThreadGroup.random_seed">0</longProp>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
