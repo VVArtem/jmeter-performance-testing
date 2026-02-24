@@ -6,6 +6,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
@@ -63,7 +65,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customer" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customer">
         <intProp name="ThreadGroup.num_threads">400</intProp>
         <intProp name="ThreadGroup.ramp_time">3600</intProp>
         <stringProp name="ThreadGroup.duration">${__P(duration,3600)}</stringProp>
@@ -118,8 +120,7 @@
           <stringProp name="variableNames">firstname,lastname,address,city,zip,phone,email</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T01_Open_Main_Page" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T01_Open_Main_Page">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -141,7 +142,6 @@
         </ModuleController>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T02_Open_Tables_PLP" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -166,7 +166,7 @@
           </ModuleController>
           <hashTree/>
         </hashTree>
-        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC: TT" enabled="true">
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC: TT">
           <collectionProp name="ModuleController.node_path">
             <stringProp name="764597751">Test Plan</stringProp>
             <stringProp name="764597751">Test Plan</stringProp>
@@ -175,7 +175,6 @@
         </ModuleController>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T03_Open_Random_Table_PDP" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -197,7 +196,6 @@
         </ModuleController>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T04_Add_To_Cart" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -230,7 +228,6 @@
         </ThroughputController>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T05_Open_Chairs_PLP" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -264,7 +261,6 @@
           </ModuleController>
           <hashTree/>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T06_Open_Random_Chair_PDP" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -286,7 +282,6 @@
           </ModuleController>
           <hashTree/>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T07_Add_To_Cart" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -320,7 +315,6 @@
         </ThroughputController>
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T08_Open_Cart" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -342,7 +336,6 @@
           </ModuleController>
           <hashTree/>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T09_Checkout_Order" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -364,7 +357,6 @@
           </ModuleController>
           <hashTree/>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T10_Fill_And_Place_Order" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -385,7 +377,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Open Model Customer">
+      <OpenModelThreadGroup guiclass="OpenModelThreadGroupGui" testclass="OpenModelThreadGroup" testname="Open Model Customer" enabled="false">
         <stringProp name="OpenModelThreadGroup.schedule">rate(0/sec) random_arrivals(5 min) rate(8/sec) even_arrivals(720 min) rate(8/sec)</stringProp>
         <longProp name="OpenModelThreadGroup.random_seed">0</longProp>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
@@ -434,7 +426,6 @@
         </CSVDataSet>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T01_Open_Main_Page">
-          <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -447,7 +438,7 @@
           </ModuleController>
           <hashTree/>
         </hashTree>
-        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC: TT">
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC: TT" enabled="true">
           <collectionProp name="ModuleController.node_path">
             <stringProp name="764597751">Test Plan</stringProp>
             <stringProp name="764597751">Test Plan</stringProp>
@@ -455,8 +446,7 @@
           </collectionProp>
         </ModuleController>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T02_Open_Tables_PLP" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T02_Open_Tables_PLP">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -489,8 +479,7 @@
           </collectionProp>
         </ModuleController>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T03_Open_Random_Table_PDP" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T03_Open_Random_Table_PDP">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -511,8 +500,7 @@
           </collectionProp>
         </ModuleController>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T04_Add_To_Cart" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T04_Add_To_Cart">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -533,7 +521,7 @@
           </collectionProp>
         </ModuleController>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="TC: 50% Add chair to cart" enabled="true">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="TC: 50% Add chair to cart">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -544,8 +532,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T05_Open_Chairs_PLP" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T05_Open_Chairs_PLP">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -578,8 +565,7 @@
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T06_Open_Random_Chair_PDP" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T06_Open_Random_Chair_PDP">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -600,8 +586,7 @@
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T07_Add_To_Cart" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T07_Add_To_Cart">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -623,7 +608,7 @@
           </ModuleController>
           <hashTree/>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="TC: 30% Place an order">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="TC: 30% Place an order" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">false</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -634,8 +619,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T08_Open_Cart" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T08_Open_Cart">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -656,8 +640,7 @@
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T09_Checkout_Order" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T09_Checkout_Order">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -678,8 +661,7 @@
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T10_Fill_And_Place_Order" enabled="true">
-            <boolProp name="TransactionController.parent">true</boolProp>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="S01_T10_Fill_And_Place_Order">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -1604,7 +1586,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Func A: Think time"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Func A: Think time" enabled="true"/>
       <hashTree>
         <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Pause" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
@@ -1619,7 +1601,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF 01: MainPage" enabled="true"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF 01: MainPage"/>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="T01_01_GET/" enabled="true">
           <intProp name="HTTPSampler.concurrentPool">6</intProp>
@@ -1879,7 +1861,7 @@ map.each { id, quantity -&gt;
           <hashTree/>
         </hashTree>
       </hashTree>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF 07: Fill info and place order"/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF 07: Fill info and place order" enabled="true"/>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="T07_01_POST/wp-admin/admin-ajax.php" enabled="true">
           <stringProp name="HTTPSampler.domain">${host}</stringProp>
@@ -2199,7 +2181,7 @@ for (int i = 1; i &lt;= count; i++) {
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
           <collectionProp name="Arguments.arguments">
             <elementProp name="influxdbMetricsSender" elementType="Argument">
